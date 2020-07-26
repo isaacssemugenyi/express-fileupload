@@ -1,0 +1,1 @@
+Create an uploads folder in the root folder

@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title Home
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    body
+        form(action="/", method="POST", enctype="multipart/form-data")
+            input(type="text", name="fileName")
+            br
+            br
+            input(type="file", name="filePath")
+            button(type="submit") Submit
+
+
+        each upload in uploads
+            br
+            div
+                img(src=upload.filePath, alt="", style="width:300px; height: 200px;")
+                ul
+                    li= upload.fileName
+                div
+                    a(href="/delete/"+upload.id) Delete
